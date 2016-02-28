@@ -1,0 +1,21 @@
+<template name="book-list">
+  {{#if currentUser}}
+    <h3>Here are your books:</h3>
+    <ul>
+      {{#each books}}
+          <li><i>{{title}}</i> by {{author}}</li>
+      {{/each}}
+    </ul>
+    
+    <form class="add-book">
+    	Title:<br>
+    	<input type="text" name="title">
+    	<br>
+    	Author:<br>
+    	<input type="text" name="author">
+    	<input type="submit" value="Add Book">
+    </form>
+  {{else}}
+    <h3>Please log in to see your books</h3>
+  {{/if}}
+</template>
